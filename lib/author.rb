@@ -22,7 +22,15 @@ class Author
     book
   end
 
+  def start_writing
+    @books.map do |book|
+      book.publication_year
+    end.min
+  end
 
-
-
+  def finish_writing
+    @books.map do |book|
+      book.publication_year
+    end.max
+  end
 end
